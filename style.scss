@@ -1,0 +1,89 @@
+@function random-hex() {
+    $color: '#';
+    $i: 0;
+    
+    @while $i <=5 {
+        $number: random($limit:15);
+        @if $number == 10 {
+            $color: $color + 'A';
+        } 
+        @else if $number == 11 {
+            $color: $color + 'B';
+        }
+        @else if $number == 12 {
+            $color: $color + 'C';
+        }
+        @else if $number == 13 {
+            $color: $color + 'D';
+        }
+        @else if $number == 14 {
+            $color: $color + 'E';
+        }
+        @else if $number == 15 {
+            $color: $color + 'F';
+        }
+        @else {
+            $color: $color + $number;
+        }
+
+        $i: $i + 1;
+    } 
+    @return unquote($string: $color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:20px;
+}
+
+.col-1 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}
+.col-2 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-3 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-4 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-5 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-6 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-7 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-8 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-9 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-1o{
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-11 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}.col-12 {
+    height: 100px;
+    width: 100px;
+    background-color: random-hex();
+}
